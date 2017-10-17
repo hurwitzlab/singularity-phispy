@@ -17,13 +17,13 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     #maybe dont need, add later if do:
     #curl autoconf libtool 
-
+    mkdir /apps
     cd /apps
     #Miniconda for cutadapt / trimgalore
     #and if trimgalore works better we might just get rid of solexaqa
     wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
     bash miniconda.sh -b -p /apps/miniconda
-    PATH="/media/miniconda/bin:$PATH"
+    PATH="/apps:/apps/miniconda/bin:$PATH"
     conda install -y -f -q -c bioconda biopython
     conda install -y -f -q -c bioconda R
     conda install -y -f -q -c bioconda r-randomforest
