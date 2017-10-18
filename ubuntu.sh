@@ -6,7 +6,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     PATH="/apps/PhiSpy:/apps/miniconda/bin:$PATH"
 
 %runscript
-    exec python /apps/PhiSpy.py
+    exec PhiSpy.py 
 
 %post
     echo "Hello from inside the container"
